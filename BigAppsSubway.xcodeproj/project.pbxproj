@@ -15,6 +15,12 @@
 		E81AB6A41E8078A3002D0616 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E81AB6A21E8078A3002D0616 /* LaunchScreen.storyboard */; };
 		E81AB6AF1E8078A4002D0616 /* BigAppsSubwayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81AB6AE1E8078A4002D0616 /* BigAppsSubwayTests.swift */; };
 		E81AB6BA1E8078BE002D0616 /* Subway.json in Resources */ = {isa = PBXBuildFile; fileRef = E81AB6B91E8078BD002D0616 /* Subway.json */; };
+		E8C81F1F1E807BA30076F104 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C81F1E1E807BA30076F104 /* DataStore.swift */; };
+		E8C81F211E807BD30076F104 /* Station.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C81F201E807BD30076F104 /* Station.swift */; };
+		E8C81F261E807C4A0076F104 /* LocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C81F251E807C4A0076F104 /* LocationViewModel.swift */; };
+		E8C81F291E807C750076F104 /* Rider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C81F281E807C750076F104 /* Rider.swift */; };
+		E8C81F2B1E807CC60076F104 /* DestinationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C81F2A1E807CC60076F104 /* DestinationViewModel.swift */; };
+		E8C81F2D1E807D120076F104 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C81F2C1E807D120076F104 /* MapView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +48,12 @@
 		E81AB6AE1E8078A4002D0616 /* BigAppsSubwayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigAppsSubwayTests.swift; sourceTree = "<group>"; };
 		E81AB6B01E8078A4002D0616 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E81AB6B91E8078BD002D0616 /* Subway.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Subway.json; path = ../Subway.json; sourceTree = "<group>"; };
+		E8C81F1E1E807BA30076F104 /* DataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
+		E8C81F201E807BD30076F104 /* Station.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Station.swift; sourceTree = "<group>"; };
+		E8C81F251E807C4A0076F104 /* LocationViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationViewModel.swift; sourceTree = "<group>"; };
+		E8C81F281E807C750076F104 /* Rider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rider.swift; sourceTree = "<group>"; };
+		E8C81F2A1E807CC60076F104 /* DestinationViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DestinationViewModel.swift; sourceTree = "<group>"; };
+		E8C81F2C1E807D120076F104 /* MapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,9 +115,11 @@
 		E81AB6981E8078A3002D0616 /* BigAppsSubway */ = {
 			isa = PBXGroup;
 			children = (
-				E81AB6991E8078A3002D0616 /* AppDelegate.swift */,
-				E81AB69B1E8078A3002D0616 /* ViewController.swift */,
-				E81AB6B91E8078BD002D0616 /* Subway.json */,
+				E8C81F221E807C030076F104 /* Model */,
+				E8C81F2E1E807D160076F104 /* View */,
+				E8C81F271E807C530076F104 /* View Model */,
+				E8C81F241E807C1E0076F104 /* Controller */,
+				E8C81F231E807C110076F104 /* Data */,
 				E81AB69D1E8078A3002D0616 /* Main.storyboard */,
 				E81AB6A01E8078A3002D0616 /* Assets.xcassets */,
 				E81AB6A21E8078A3002D0616 /* LaunchScreen.storyboard */,
@@ -121,6 +135,50 @@
 				E81AB6B01E8078A4002D0616 /* Info.plist */,
 			);
 			path = BigAppsSubwayTests;
+			sourceTree = "<group>";
+		};
+		E8C81F221E807C030076F104 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E8C81F201E807BD30076F104 /* Station.swift */,
+				E8C81F281E807C750076F104 /* Rider.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		E8C81F231E807C110076F104 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				E81AB6B91E8078BD002D0616 /* Subway.json */,
+				E8C81F1E1E807BA30076F104 /* DataStore.swift */,
+			);
+			name = Data;
+			sourceTree = "<group>";
+		};
+		E8C81F241E807C1E0076F104 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E81AB6991E8078A3002D0616 /* AppDelegate.swift */,
+				E81AB69B1E8078A3002D0616 /* ViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		E8C81F271E807C530076F104 /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				E8C81F2A1E807CC60076F104 /* DestinationViewModel.swift */,
+				E8C81F251E807C4A0076F104 /* LocationViewModel.swift */,
+			);
+			name = "View Model";
+			sourceTree = "<group>";
+		};
+		E8C81F2E1E807D160076F104 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E8C81F2C1E807D120076F104 /* MapView.swift */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -280,6 +338,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				E81AB69C1E8078A3002D0616 /* ViewController.swift in Sources */,
+				E8C81F2D1E807D120076F104 /* MapView.swift in Sources */,
+				E8C81F1F1E807BA30076F104 /* DataStore.swift in Sources */,
+				E8C81F291E807C750076F104 /* Rider.swift in Sources */,
+				E8C81F211E807BD30076F104 /* Station.swift in Sources */,
+				E8C81F261E807C4A0076F104 /* LocationViewModel.swift in Sources */,
+				E8C81F2B1E807CC60076F104 /* DestinationViewModel.swift in Sources */,
 				E81AB69A1E8078A3002D0616 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
