@@ -1,0 +1,6 @@
+framework module Pods_BigAppsSubway {
+  umbrella header "Pods-BigAppsSubway-umbrella.h"
+
+  export *
+  module * { export * }
+}
