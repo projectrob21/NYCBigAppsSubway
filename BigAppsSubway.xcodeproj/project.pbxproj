@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		AF02D5D910C34759C2FA3BB3 /* Pods_BigAppsSubway.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1169948C07F001168300B55C /* Pods_BigAppsSubway.framework */; };
 		E81AB69A1E8078A3002D0616 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81AB6991E8078A3002D0616 /* AppDelegate.swift */; };
-		E81AB69C1E8078A3002D0616 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81AB69B1E8078A3002D0616 /* ViewController.swift */; };
+		E81AB69C1E8078A3002D0616 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81AB69B1E8078A3002D0616 /* MapViewController.swift */; };
 		E81AB69F1E8078A3002D0616 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E81AB69D1E8078A3002D0616 /* Main.storyboard */; };
 		E81AB6A11E8078A3002D0616 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E81AB6A01E8078A3002D0616 /* Assets.xcassets */; };
 		E81AB6A41E8078A3002D0616 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E81AB6A21E8078A3002D0616 /* LaunchScreen.storyboard */; };
@@ -21,6 +21,7 @@
 		E8C81F291E807C750076F104 /* Rider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C81F281E807C750076F104 /* Rider.swift */; };
 		E8C81F2B1E807CC60076F104 /* DestinationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C81F2A1E807CC60076F104 /* DestinationViewModel.swift */; };
 		E8C81F2D1E807D120076F104 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C81F2C1E807D120076F104 /* MapView.swift */; };
+		E8C81F301E8087160076F104 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C81F2F1E8087160076F104 /* MapViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +40,7 @@
 		B4FD986FB21B2A075637EF3E /* Pods-BigAppsSubway.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BigAppsSubway.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BigAppsSubway/Pods-BigAppsSubway.debug.xcconfig"; sourceTree = "<group>"; };
 		E81AB6961E8078A3002D0616 /* BigAppsSubway.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BigAppsSubway.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E81AB6991E8078A3002D0616 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E81AB69B1E8078A3002D0616 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E81AB69B1E8078A3002D0616 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		E81AB69E1E8078A3002D0616 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E81AB6A01E8078A3002D0616 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E81AB6A31E8078A3002D0616 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -54,6 +55,7 @@
 		E8C81F281E807C750076F104 /* Rider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rider.swift; sourceTree = "<group>"; };
 		E8C81F2A1E807CC60076F104 /* DestinationViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DestinationViewModel.swift; sourceTree = "<group>"; };
 		E8C81F2C1E807D120076F104 /* MapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		E8C81F2F1E8087160076F104 /* MapViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,7 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				E81AB6991E8078A3002D0616 /* AppDelegate.swift */,
-				E81AB69B1E8078A3002D0616 /* ViewController.swift */,
+				E81AB69B1E8078A3002D0616 /* MapViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -169,6 +171,7 @@
 			children = (
 				E8C81F2A1E807CC60076F104 /* DestinationViewModel.swift */,
 				E8C81F251E807C4A0076F104 /* LocationViewModel.swift */,
+				E8C81F2F1E8087160076F104 /* MapViewModel.swift */,
 			);
 			name = "View Model";
 			sourceTree = "<group>";
@@ -337,7 +340,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E81AB69C1E8078A3002D0616 /* ViewController.swift in Sources */,
+				E81AB69C1E8078A3002D0616 /* MapViewController.swift in Sources */,
 				E8C81F2D1E807D120076F104 /* MapView.swift in Sources */,
 				E8C81F1F1E807BA30076F104 /* DataStore.swift in Sources */,
 				E8C81F291E807C750076F104 /* Rider.swift in Sources */,
@@ -345,6 +348,7 @@
 				E8C81F261E807C4A0076F104 /* LocationViewModel.swift in Sources */,
 				E8C81F2B1E807CC60076F104 /* DestinationViewModel.swift in Sources */,
 				E81AB69A1E8078A3002D0616 /* AppDelegate.swift in Sources */,
+				E8C81F301E8087160076F104 /* MapViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

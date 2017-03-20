@@ -9,44 +9,34 @@
 import GoogleMaps
 
 class Station {
-    let id: Int
     let name: String
-    let branch: Branch
     var isSelected = false
     var isHidden = false
-    let latitude: Double
-    let longitude: Double
+    let coordinates: [Double]
     var coordinate2D: CLLocationCoordinate2D {
         get {
-            return CLLocationCoordinate2D(latitude: latitude as CLLocationDegrees, longitude: longitude as CLLocationDegrees)
+                return CLLocationCoordinate2D(latitude: coordinates.last! as CLLocationDegrees, longitude: coordinates.first! as CLLocationDegrees)
+
         }
     }
     var coordinateCL: CLLocation {
+
         get {
-            return CLLocation(latitude: latitude as CLLocationDegrees, longitude: longitude as CLLocationDegrees)
+                return CLLocation(latitude: coordinates.last! as CLLocationDegrees, longitude: coordinates.first! as CLLocationDegrees)
+
         }
     }
     
     init(jsonData: [String : Any]) {
-        self.name = jsonData["stop_name"] as! String
+        self.name = jsonData["name"] as! String
         
-        let latSting = jsonData["stop_lat"] as! String
-        self.latitude = Double(latSting)!
+        let geom = jsonData["the_geom"] as? [String : Any]
         
-        let lonString = jsonData["stop_lon"] as! String
-        self.longitude = Double(lonString)!
+        let coordinates = geom?["coordinates"] as! [Double]
         
-        let idString = jsonData["stop_id"] as! String
-        self.id = Int(idString)!
+        print("COORINATES = \(coordinates)")
+        self.coordinates = coordinates
         
-        let branch = jsonData["branch"] as! String
-        
-        switch branch {
-            case "LIRR" : self.branch = .LIRR;
-            case "MetroNorth" : self.branch = .MetroNorth;
-            case "NJTransit" : self.branch = .NJTransit;
-            default: self.branch = .unknown
-        }
     }
     
 }
