@@ -75,6 +75,7 @@ extension MapView: AddToMapDelegate {
             let marker = GMSMarker()
             marker.position = station.coordinate2D
             marker.isFlat = true
+
             
             if !station.isHidden {
                 marker.map = stationsMap
