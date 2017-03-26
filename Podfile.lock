@@ -1,0 +1,19 @@
+PODS:
+  - GoogleMaps (2.2.0):
+    - GoogleMaps/Maps (= 2.2.0)
+  - GoogleMaps/Base (2.2.0)
+  - GoogleMaps/Maps (2.2.0):
+    - GoogleMaps/Base
+  - SnapKit (3.2.0)
+
+DEPENDENCIES:
+  - GoogleMaps
+  - SnapKit (~> 3.0)
+
+SPEC CHECKSUMS:
+  GoogleMaps: 104c418d61ab8a05dff06ed0784c25ea9d37da45
+  SnapKit: 1ca44df72cfa543218d177cb8aab029d10d86ea7
+
+PODFILE CHECKSUM: 23aa8a016edfbd41056914a86894b5a7eb2b6d80
+
+COCOAPODS: 1.1.1
