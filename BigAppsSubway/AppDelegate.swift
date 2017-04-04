@@ -7,16 +7,54 @@
 //
 
 import UIKit
+<<<<<<< HEAD
+=======
+import GoogleMaps
+>>>>>>> json
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+<<<<<<< HEAD
     var window: UIWindow?
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         return true
+=======
+    let googleAPI = "AIzaSyDLkK5fHf0Q6p0l1g521hqlg1UWAVZ7kgo"
+
+    
+    var window: UIWindow?
+    var homeViewController: UIViewController!
+    var navigationController: UINavigationController!
+
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+
+        GMSServices.provideAPIKey(googleAPI)
+        
+        window = UIWindow(frame: UIScreen.main.bounds)
+        homeViewController = MapViewController()
+        
+        let mainColor = UIColor(red: 0 / 255, green: 61 / 255, blue: 92 / 255, alpha: 1)
+        
+        navigationController = UINavigationController()
+        navigationController.navigationBar.barTintColor = mainColor
+        navigationController.navigationBar.alpha = 0.2
+        navigationController.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName : UIColor.white]
+        navigationController.navigationBar.tintColor = UIColor.white
+        navigationController.navigationBar.isTranslucent = false
+        navigationController.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navigationController?.navigationBar.shadowImage = UIImage()
+        navigationController.viewControllers = [homeViewController]
+        
+        window?.rootViewController = navigationController
+        window?.makeKeyAndVisible()
+        
+        return true
+        
+>>>>>>> json
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
